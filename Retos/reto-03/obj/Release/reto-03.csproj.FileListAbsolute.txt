@@ -1,0 +1,7 @@
+C:\Users\Martin Aguirre\OneDrive\Documentos\Programación\Retos de Programación\Retos\reto-03\bin\Release\reto-03.exe.config
+C:\Users\Martin Aguirre\OneDrive\Documentos\Programación\Retos de Programación\Retos\reto-03\bin\Release\reto-03.exe
+C:\Users\Martin Aguirre\OneDrive\Documentos\Programación\Retos de Programación\Retos\reto-03\bin\Release\reto-03.pdb
+C:\Users\Martin Aguirre\OneDrive\Documentos\Programación\Retos de Programación\Retos\reto-03\obj\Release\reto-03.csproj.AssemblyReference.cache
+C:\Users\Martin Aguirre\OneDrive\Documentos\Programación\Retos de Programación\Retos\reto-03\obj\Release\reto-03.csproj.CoreCompileInputs.cache
+C:\Users\Martin Aguirre\OneDrive\Documentos\Programación\Retos de Programación\Retos\reto-03\obj\Release\reto-03.exe
+C:\Users\Martin Aguirre\OneDrive\Documentos\Programación\Retos de Programación\Retos\reto-03\obj\Release\reto-03.pdb
