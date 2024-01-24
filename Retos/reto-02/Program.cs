@@ -19,49 +19,98 @@ namespace reto_02
             //* -NO hace falta comprobar que ambas palabras existan.
             //* -Dos palabras exactamente iguales no son anagrama.
 
-            bool respuesta = Anagrama("aroma", "amora");
+            //bool respuesta = Anagrama("aroma", "amora");
 
-            Console.WriteLine(respuesta);
+            //Console.WriteLine(respuesta);
+            //Console.ReadLine();
+
+            //bool Anagrama(string palabra1, string palabra2)
+            //{
+            //    int cont = 0;
+
+            //    if (palabra1 == palabra2)
+            //    {
+            //        return false;
+            //    }
+
+            //    if(palabra1.Length != palabra2.Length)
+            //    {
+            //        return false;
+            //    }
+
+            //    char[] array1 = new char[palabra1.Length];
+            //    char[] array2 = new char[palabra2.Length];
+
+            //    for (int i = 0; i < palabra1.Length; i++)
+            //    {
+            //        for (int x = 0; x < palabra2.Length; x++)
+            //        {
+            //            if (array1[i] == array2[x])
+            //            {
+            //                x = palabra2.Length;
+            //                cont++;
+            //            }
+
+            //        }
+            //    }
+
+            //    if (cont == palabra1.Length)
+            //    {
+            //        return true;
+            //    }
+            //    else
+            //    {
+            //        return false;
+            //    }
+            //}
+
+            /*
+            * Crea una función que reciba dos cadenas como parámetro (str1, str2)
+            * e imprima otras dos cadenas como salida (out1, out2).
+            * - out1 contendrá todos los caracteres presentes en la str1 pero NO
+            *   estén presentes en str2.
+            * - out2 contendrá todos los caracteres presentes en la str2 pero NO
+            *   estén presentes en str1.
+            */
+
+            (string rdo1, string rdo2) = Expresiones("hola", "capo");
+            Console.WriteLine(rdo1);
+            Console.WriteLine(rdo2);
             Console.ReadLine();
 
-            bool Anagrama(string palabra1, string palabra2)
+            (string,string) Expresiones(string cadena1, string cadena2)
             {
-                int cont = 0;
+                List<char> lista1 = cadena1.ToCharArray().ToList();
+                List<char> lista2 = cadena2.ToCharArray().ToList();
 
-                if (palabra1 == palabra2)
-                {
-                    return false;
-                }
-                
-                if(palabra1.Length != palabra2.Length)
-                {
-                    return false;
-                }
+                List<char> listaAux1 = new List<char>();
+                List<char> listaAux2 = new List<char>();
 
-                char[] array1 = new char[palabra1.Length];
-                char[] array2 = new char[palabra2.Length];
-
-                for (int i = 0; i < palabra1.Length; i++)
+                foreach (char c in lista1) //HL
                 {
-                    for (int x = 0; x < palabra2.Length; x++)
+                    foreach (char c2 in lista2) //CP
                     {
-                        if (array1[i] == array2[x])
+                        if (c == c2)
                         {
-                            x = palabra2.Length;
-                            cont++;
+                            listaAux1.Add(c);
+                            listaAux2.Add(c2);
                         }
-                        
                     }
                 }
 
-                if (cont == palabra1.Length)
+                foreach (char c in listaAux1)
                 {
-                    return true;
+                    lista1.Remove(c);
                 }
-                else
+                foreach (char c in listaAux2)
                 {
-                    return false;
+                    lista2.Remove(c);
                 }
+
+                string resultado1 = new string(lista1.ToArray());
+                string resultado2 = new string(lista2.ToArray());
+
+                return (resultado1, resultado2);
             }
 
         }

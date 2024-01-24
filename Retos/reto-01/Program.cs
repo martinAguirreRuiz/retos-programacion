@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,27 +20,111 @@ namespace reto_01
             * - Múltiplos de 3 y de 5 a la vez por la palabra "fizzbuzz".
             */
 
-            for (int i = 0; i < 100; i++)
+            //for (int i = 0; i < 100; i++)
+            //{
+            //    if ((i+1) % 3 == 0 && (i+1) % 5 == 0)
+            //    {
+            //        Console.WriteLine("fizzbuzz");
+            //    }
+            //    else if ((i+1) % 3 == 0)
+            //    {
+            //        Console.WriteLine("fizz");
+            //    }
+            //    else if((i+1)% 5 == 0)
+            //    {
+            //        Console.WriteLine("buzz");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine(i + 1);
+            //    }
+            //}
+
+            //Console.ReadLine();
+
+            //-----------------------------------------------------------
+
+            //RETO 11
+
+            /*
+            * Crea un programa que comprueba si los paréntesis, llaves y corchetes
+            * de una expresión están equilibrados.
+            * - Equilibrado significa que estos delimitadores se abren y cieran
+            *   en orden y de forma correcta.
+            * - Paréntesis, llaves y corchetes son igual de prioritarios.
+            *   No hay uno más importante que otro.
+            * - Expresión balanceada: { [ a * ( c + d ) ] - 5 }
+            * - Expresión no balanceada: { a * ( c + d ) ] - 5 }
+            */
+
+            Console.WriteLine("Escribe una expresión por favor:");
+            string expresion = Console.ReadLine();
+            int contLlaveAbierta = 0;
+            int contLlaveCerrada = 0;
+            int contCorcheteAbierto = 0;
+            int contCorcheteCerrado = 0;
+            int contParentesisAbierto = 0;
+            int contParentesisCerrado = 0;
+
+            if (expresion.Contains("{") || expresion.Contains("}") || expresion.Contains("[") || expresion.Contains("]") || expresion.Contains("(") || expresion.Contains(")"))
             {
-                if ((i+1) % 3 == 0 && (i+1) % 5 == 0)
+                List<char> chars = expresion.ToCharArray().ToList();
+                foreach (var caracter in chars)
                 {
-                    Console.WriteLine("fizzbuzz");
+                    switch (caracter)
+                    {
+                        case '{':
+                            contLlaveAbierta++;
+                            break;
+                        case '}':
+                            contLlaveCerrada++;
+                            break;
+                        case '[':
+                            contCorcheteAbierto++; 
+                            break;
+                        case ']':
+                            contCorcheteCerrado++;
+                            break;
+                        case '(':
+                            contParentesisAbierto++;
+                            break;
+                        case ')': 
+                            contParentesisCerrado++;
+                            break;
+                    }
                 }
-                else if ((i+1) % 3 == 0)
+                if (contLlaveAbierta != contLlaveCerrada)
                 {
-                    Console.WriteLine("fizz");
+                    int diferencia;
+
+                    if (contLlaveAbierta > contLlaveCerrada)
+                    {
+                        diferencia = contLlaveAbierta - contLlaveCerrada;
+
+                        for(int i = 0; i < diferencia; i++)
+                        {
+                            chars.Add('}');
+                        }
+                    }
+                    else
+                    {
+
+                    }
                 }
-                else if((i+1)% 5 == 0)
+                if (contCorcheteAbierto != contCorcheteCerrado)
                 {
-                    Console.WriteLine("buzz");
+                    
                 }
-                else
+                if (contParentesisAbierto != contParentesisCerrado)
                 {
-                    Console.WriteLine(i + 1);
+
                 }
+                expresion = chars.ToString();
             }
 
+            Console.WriteLine(expresion);
             Console.ReadLine();
+
         }
     }
 }

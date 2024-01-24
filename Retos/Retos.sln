@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "reto-07", "reto-07\reto-07.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "reto-08", "reto-08\reto-08.csproj", "{AD2D2C29-5A9F-4411-B07A-1DE4A2D4C6CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reto-09", "reto-09\reto-09.csproj", "{C2E4829E-2FFF-4BB4-8DE1-EF4EB41D6F71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "reto-09", "reto-09\reto-09.csproj", "{C2E4829E-2FFF-4BB4-8DE1-EF4EB41D6F71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reto-10", "reto-10\reto-10.csproj", "{EDF8D3E7-57EB-4570-8321-0C66FB85178D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{C2E4829E-2FFF-4BB4-8DE1-EF4EB41D6F71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2E4829E-2FFF-4BB4-8DE1-EF4EB41D6F71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2E4829E-2FFF-4BB4-8DE1-EF4EB41D6F71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDF8D3E7-57EB-4570-8321-0C66FB85178D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDF8D3E7-57EB-4570-8321-0C66FB85178D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDF8D3E7-57EB-4570-8321-0C66FB85178D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDF8D3E7-57EB-4570-8321-0C66FB85178D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
